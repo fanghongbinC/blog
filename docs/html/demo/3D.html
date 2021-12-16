@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建场景</title>
+    <script src="https://waibu-demo.obs.cn-east-2.myhuaweicloud.com:443/20210528/app.js"></script>
+</head>
+<body style="padding: 0; margin: 0;">
+<div id="container" style="width: 100%;height: 100vh;" />
+</body>
+</html>
+<script>
+    //鉴权参数，从 https://dev.laozicloud.com/ 获取
+    const param = {
+        appkey: 'kJHWOVTFLrne',
+        appsecret: 'EkXhzq3MZHWGuBg0f4YLVOK2bPnowjJx'
+    }
+    //创建一个场景
+    const viewer = new AMRT.Viewer( 'container', /*容器dom或者dom对应的id*/ param )
+
+    //通过老子云id加载一个模型
+    viewer.loadModel('1413394435915517952')
+</script>

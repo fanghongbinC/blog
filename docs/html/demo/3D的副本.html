@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本操作</title>
+    <link rel="stylesheet" href="https://waibu-demo.obs.cn-east-2.myhuaweicloud.com:443/lib/message.css">
+    <script src="https://waibu-demo.obs.cn-east-2.myhuaweicloud.com:443/20210528/app.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+    <script src="https://waibu-demo.obs.cn-east-2.myhuaweicloud.com:443/lib/message.min.js"></script>
+</head>
+<body style="padding: 0; margin: 0;">
+<div id="container" style="width: 100%;height: 100vh;" />
+</body>
+</html>
+<script>
+    const gui = new dat.GUI()
+    const param = {
+        appkey: 'AAKkgYqnwSZA',
+        appsecret: 'A1u7XrgP8pa5csNADziQLhjwEynl2O6A'
+    }
+    const viewer = new AMRT.Viewer( 'container', param )
+    viewer.loadModel('1397479594793242624')
+    const model = viewer.loadModel('1397399631327006720', { focus: false, background: false })
+
+    gui.add(new function () {
+        this['获取当前视角'] = function () {
+            const view = viewer.controls.getView()
+            Qmsg.success( '当前相机位置: ' + JSON.stringify( view.position ) + '看向点: ' + JSON.stringify( view.target ) )
+        }
+    }, '获取当前视角')
+
+    gui.add(new function () {
+        this['设置视角'] = function () {
+            const view = {
+                position: [-14.074263508217765, 9.935031552668832, -8.938789763820626], //目标位置
+                target: [-17.687608554460727, 5.353080780350936, -15.109379207688422] //目标看向点
+            }
+            //设置视角，该数据可以通过 viewer.controls.getView 方法获得
+            viewer.controls.setView( view )
+        }
+    }, '设置视角')
+
+    gui.add(new function () {
+        this['聚焦对象'] = function () {
+            const view = viewer.controls.fit( model )
+        }
+    }, '聚焦对象')
+
+    gui.add(new function () {
+        this['飞行到位置'] = function () {
+            viewer.controls.flyTo({
+                position: [7.848010697768785, 13.863301961003248, 11.822562343766243], //目标位置
+                target: [33.44330055243188, -8.697633960508387, 1.2834293599422366], //目标看向点
+                time: 1000, //飞行事件
+                complete: function () {
+                    Qmsg.success('飞行结束')
+                }
+            })
+        }
+    }, '飞行到位置')
+
+    gui.add({ '旋转视角': false }, '旋转视角').onChange(function (value) {
+        if( value ){
+            viewer.controls.startAutoRotate()
+        }else{
+            viewer.controls.stopAutoRotate()
+        }
+    })
+</script>
