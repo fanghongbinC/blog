@@ -14,10 +14,10 @@ echo 'fanghongbinC.github.io' > CNAME
 
 if [ -z "$GITHUB_TOKEN" ]; then
   msg='deploy'
-  githubUrl=git@github.com:fanghongbinC/Vdoing2
+  githubUrl=git@github.com:fanghongbinC/blog
 else
   msg='来自github actions的自动部署'
-  githubUrl=https://fanghongbinC:${GITHUB_TOKEN}@github.com/fanghongbinC/Vdoing2
+  githubUrl=https://fanghongbinC:${GITHUB_TOKEN}@github.com/fanghongbinC/blog
   git config --global user.name "方洪斌"
   git config --global user.email "1170323375@qq.com"
 fi
