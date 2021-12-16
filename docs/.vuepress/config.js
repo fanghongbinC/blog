@@ -9,7 +9,7 @@ const themeConfig = require('./config/themeConfig.js');
 //
 
 module.exports = {
-  theme: 'blog', // 使用npm包主题
+  theme: 'vdoing', // 使用npm包主题
   // theme: require.resolve('../../theme-vdoing'), // 使用本地主题
 
   title: "博客文档",

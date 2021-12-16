@@ -73,7 +73,7 @@ module.exports = {
       {
         iconClass: 'icon-github',
         title: 'GitHub',
-        link: 'https://github.com/xugaoyi',
+        link: 'https://github.com/fanghongbinC',
       },
       {
         iconClass: 'icon-erji',
