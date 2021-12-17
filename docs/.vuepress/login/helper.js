@@ -5,7 +5,7 @@ import {showToast} from "../plugins/toast/index";
 export const STORAGE_KEY = 'user_auth_login'
 
 
-/** 加密秘钥 必须是 4的倍数 */
+/** 加密秘钥 长度必须是 4的倍数 */
 const SECRET_KEY = "yxn4018b"
 
 /** 登录过期时间 小时 */
@@ -72,7 +72,6 @@ export function login(userName,password){
     /** 是否 匹配*/
     var isMatchUser = false
 
-
     //确认是否 账号是否在默认密码内
     for(var key in userList)
     {
@@ -85,7 +84,6 @@ export function login(userName,password){
             break;
         }
     }
-
     // 账号匹配成功
     if(isMatchUser){
 
