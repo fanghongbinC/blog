@@ -12,23 +12,14 @@ export default ({
 
   Vue.use(toastRegistry)
 
-
   /**
    * 添加 添加登录访问
    * 第一种方法  混入组件弹窗 来控制登录   缺点：的就是别人可以通过 控制台 删除 document 方式来直接查看内容
    * 第二种方法  通过路由守卫 拦截 未授权的去 登录页面
    * */
-  // Vue.mixin({
-  //
-  //   mounted() {
-  //
-  //     document.body.setAttribute('theme-vdoing', window.localStorage.getItem('theme-vdoing') || 'light');
-  //     window.localStorage.setItem('theme-vdoing', window.localStorage.getItem('theme-vdoing') || 'light');
-  //
-  //   }
-  //
-  // });
 
+
+  // 添加登录页面 到路由控制
   router.addRoute(  {
     path: '/login',
     component: (resolve) => require(['./login/Login'], resolve),
@@ -36,21 +27,18 @@ export default ({
   })
 
 
-
-
-
   let  ing = false;
   Vue.mixin({
     // 请确保只在 beforeMount 或者 mounted 访问浏览器 / DOM 的 API
     mounted() {
       // 校验方法
-      // debugger
       const doCheck = () => {
         if (!checkAuth()) {
           router.push({ path: '/login'})
           ing=false
         }
       }
+      // 防止 过度调用方法
       if(!ing){
         ing=true
         doCheck()
