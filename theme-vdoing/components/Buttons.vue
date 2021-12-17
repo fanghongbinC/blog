@@ -89,7 +89,9 @@ export default {
     }
   },
   mounted () {
-    this.currentMode = storage.get('mode') || 'auto'
+    // 设置当前页面 主题模式  默认阅读模式
+    this.currentMode = storage.get('mode') || 'read'
+    this.$emit('toggle-theme-mode', this.currentMode)
 
     this.scrollTop = this.getScrollTop()
     window.addEventListener('scroll', debounce(() => {

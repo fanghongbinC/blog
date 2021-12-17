@@ -20,7 +20,7 @@ module.exports = [
         text: 'JavaScript',
         items: [
           { text: 'Vue', link: '/pages/63b737/' },
-          { text: '自定义组件', link: '/pages/6c2985/' },
+          { text: '自定义组件', link: '/' },
           { text: 'js插件', link: '/pages/6c2985/' },
           { text: 'Js工具类', link: '/pages/1d7408/' },
           { text: 'JS异常', link: '/pages/8e211e/' },
