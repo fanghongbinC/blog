@@ -27,25 +27,29 @@ export default ({
   })
 
 
-  let  ing = false;
-  Vue.mixin({
-    // 请确保只在 beforeMount 或者 mounted 访问浏览器 / DOM 的 API
-    mounted() {
-      // 校验方法
-      const doCheck = () => {
-        if (!checkAuth()) {
-          router.push({ path: '/login'})
-          ing=false
-        }
-      }
-      // 防止 过度调用方法
-      if(!ing){
-        ing=true
-        doCheck()
-      }
-
-    }
-  })
+  /**
+   * 混入 使用钩子函数 每次检查用户是否已登录
+   * 未登录 路由到登录页面
+   * */
+  // let  ing = false;
+  // Vue.mixin({
+  //   // 请确保只在 beforeMount 或者 mounted 访问浏览器 / DOM 的 API
+  //   mounted() {
+  //     // 校验方法
+  //     const doCheck = () => {
+  //       if (!checkAuth()) {
+  //         router.push({ path: '/login'})
+  //         ing=false
+  //       }
+  //     }
+  //     // 防止 过度调用方法
+  //     if(!ing){
+  //       ing=true
+  //       doCheck()
+  //     }
+  //
+  //   }
+  // })
 
   /** 添加路由拦截器  来校验 是否登录
    *  问题： 开发是可以 ，打包编译 时会 报 ReferenceError: pageMeta is not defined
