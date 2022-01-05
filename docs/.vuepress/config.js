@@ -18,6 +18,12 @@ module.exports = {
   markdown: {
     lineNumbers: true, // 代码行号
   },
+  devServer: {
+    // host: '0.0.0.0',
+    port: 1010,
+    open: true,
+    disableHostCheck: true
+  },
   // 配置别名 还有问题
   // configureWebpack: {
   //   resolve: {
