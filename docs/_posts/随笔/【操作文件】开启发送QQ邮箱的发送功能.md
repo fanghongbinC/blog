@@ -49,7 +49,7 @@ tags:
 
 
 
-![img](https://gpm7ev8j7t.feishu.cn/space/api/file/out/Ewvx5qSDsLHlKJyqIJHxl6PU0QsSIymdXljRTWBygfUPujnqgv/)
+![image-20220218200512962](http://img.alicbin.com/img/20220218200512.png)
 
 
 
