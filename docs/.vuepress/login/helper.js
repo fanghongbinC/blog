@@ -9,7 +9,7 @@ export const STORAGE_KEY = 'user_auth_login'
 const SECRET_KEY = "yxn4018b"
 
 /** 登录过期时间 小时 */
-const TIME_OUT_HOUR = 12
+const TIME_OUT_HOUR = 24
 
 const userList={
     "admin" : "admin"  // 账号 和 未混淆的密码

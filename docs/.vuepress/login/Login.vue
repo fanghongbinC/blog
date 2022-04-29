@@ -77,8 +77,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  //background-image: url(https://jack-img.oss-cn-hangzhou.aliyuncs.com/img/20210605145847.jpg);
-  //background-size cover
+  background-image: url(https://jack-img.oss-cn-hangzhou.aliyuncs.com/img/20210605145847.jpg);
+  background-size cover
 }
 
 .login-form
@@ -90,6 +90,7 @@ export default {
   width: 400px;
   background: #FFF;
   border-radius: 10px;
+  opacity: 0.5;
 
   .btn-row
     margin-top 1rem
@@ -150,6 +151,6 @@ export default {
 }
 
 .cb-slideshow li:nth-child(1) {
- background-image: url(https://jack-img.oss-cn-hangzhou.aliyuncs.com/img/20210605145847.jpg);
+ background-image: url(http://img.qfgtt.cn/2022/04/20/34d8a23d65734cd591e3ce8cad064bf2.png);
 }
 </style>
