@@ -55,7 +55,7 @@ module.exports = {
     // 博主信息，显示在首页侧边栏
     avatar: 'http://img.alicbin.com/img/%E7%8A%AC%E5%A4%9C%E5%8F%892.png',
     name: '工程犬',
-    slogan: '我要干嘛！我要去哪里！旺！',
+    slogan: ' (~￣△￣)~ ',
 
     // avatar: 'http://img.alicbin.com/youxiniao.jpeg',
     // name: '笔记',

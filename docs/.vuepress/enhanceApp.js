@@ -35,18 +35,18 @@ export default ({
   Vue.mixin({
     // 请确保只在 beforeMount 或者 mounted 访问浏览器 / DOM 的 API
     mounted() {
-      // 校验方法
-      const doCheck = () => {
-        if (!checkAuth()) {
-          router.push({ path: '/login'})
-          ing=false
-        }
-      }
-      // 防止 过度调用方法
-      if(!ing){
-        ing=true
-        doCheck()
-      }
+      // // 校验方法
+      // const doCheck = () => {
+      //   if (!checkAuth()) {
+      //     router.push({ path: '/login'})
+      //     ing=false
+      //   }
+      // }
+      // // 防止 过度调用方法
+      // if(!ing){
+      //   ing=true
+      //   doCheck()
+      // }
 
     }
   })
