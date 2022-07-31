@@ -83,3 +83,17 @@ features: # 可选的
 - **GitHub**: <https://github.com/xugaoyi>
 
 </br>  --> 
+
+
+
+```
+rm -rf /Users/binpro/Library/Preferences/jetbrains.jetprofile.asset.plist
+ 
+rm -rf /Users/binpro/Library/Caches/JetBrains
+ 
+rm -rf /Users/binpro/Library/Application\ Support/JetBrains
+ 
+rm -rf /Users/binpro/Library/Logs/JetBrains
+```
+
+![image-20220731220311350](/Users/binpro/Library/Application%20Support/typora-user-images/image-20220731220311350.png)
